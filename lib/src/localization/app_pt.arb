@@ -1,0 +1,27 @@
+{
+  "@@locale": "pt",
+
+  "appTitle": "Contador de Pizza",
+
+  "confirmButton": "Confirmar",
+  "backButton": "Voltar",
+  "closeButton": "Fechar",
+  "confirmExit": "Confirmar saída",
+
+  "pizzaPage": "Contador de pizza",
+  "settingsPage": "Configurações",
+  "historicPage": "Histórico",
+  "statisticPage": "Estatísticas",
+  "aboutPage": "Sobre",
+
+  "settingsTitle": "Configurações",
+  "settingsTheme": "Tema",
+  "settingsSystemTheme": "Tema do sistema",
+  "settingsLightTheme": "Tema claro",
+  "settingsDarkTheme": "Tema escuro",
+
+  "settingsLanguage": "Linguagem",
+  "settingsPortuguese": "Português",
+  "settingsEnglish": "Inglês",
+  "settingsSpanish": "Espanhol"
+}
