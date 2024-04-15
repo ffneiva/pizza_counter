@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:pizza_counter/src/pizza_counter/pizza_counter_view.dart';
 import 'package:pizza_counter/src/settings/settings_view.dart';
 import 'package:pizza_counter/src/utils/functions.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -11,8 +12,6 @@ class PizzaDrawer extends StatefulWidget {
     super.key,
     required this.scaffoldState,
   });
-
-  static const routeName = '/';
 
   @override
   State<PizzaDrawer> createState() => _PizzaDrawerState();
@@ -30,8 +29,8 @@ class _PizzaDrawerState extends State<PizzaDrawer> {
             child: ListView(
               children: [
                 _drawerHeader(locale),
-                // _listTileItem(
-                //     Icons.extension, locale.pizzaPage, const PizzaView()),
+                _listTileItem(Icons.local_pizza, locale.pizzaPage,
+                    const PizzaCounterView()),
                 // _listTileItem(
                 //     Icons.history, locale.historicPage, const HistoricView()),
                 _listTileItem(
@@ -49,16 +48,16 @@ class _PizzaDrawerState extends State<PizzaDrawer> {
 
   Widget _drawerHeader(AppLocalizations locale) {
     return DrawerHeader(
-      decoration: const BoxDecoration(color: Colors.teal),
+      decoration: const BoxDecoration(color: Color.fromARGB(255, 255, 160, 0)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // CircleAvatar(
-          //   backgroundColor: Colors.white,
-          //   radius: 50,
-          //   child: Image.asset('assets/images/logo.png'),
-          // ),
+          CircleAvatar(
+            backgroundColor: Colors.transparent,
+            radius: 50,
+            child: Image.asset('assets/images/logo.png'),
+          ),
           const SizedBox(height: 8),
           FittedBox(
             fit: BoxFit.scaleDown,
@@ -80,10 +79,12 @@ class _PizzaDrawerState extends State<PizzaDrawer> {
       onTap: () {
         Navigator.pop(context);
         Navigator.of(context).popUntil((route) => route.isFirst);
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => page),
-        );
+        if (page.toString() != const PizzaCounterView().toString()) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => page),
+          );
+        }
       },
     );
   }

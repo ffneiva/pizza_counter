@@ -6,6 +6,8 @@
   "confirmButton": "Confirmar",
   "backButton": "Voltar",
   "closeButton": "Fechar",
+  "removeButton": "Remover",
+  "cleanButton": "Limpar",
   "confirmExit": "Confirmar saída",
 
   "pizzaPage": "Contador de pizza",
@@ -23,5 +25,12 @@
   "settingsLanguage": "Linguagem",
   "settingsPortuguese": "Português",
   "settingsEnglish": "Inglês",
-  "settingsSpanish": "Espanhol"
+  "settingsSpanish": "Espanhol",
+
+  "pizzaTitle": "Contador de pizza",
+  "pizzaGroup": "Grupo",
+  "pizzaEmptyGroup": "O grupo está vazio",
+  "pizzaAddPerson": "Adicionar participante",
+  "pizzaEditPerson": "Editar participante",
+  "pizzaRemovePerson": "Remover participante?"
 }
