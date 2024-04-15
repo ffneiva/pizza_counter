@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'settings_service.dart';
+import 'package:pizza_counter/src/settings/settings_service.dart';
 
 class SettingsController with ChangeNotifier {
   static final SettingsController _instance =
