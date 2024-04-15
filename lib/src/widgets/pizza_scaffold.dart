@@ -47,7 +47,7 @@ class _PizzaScaffoldStateState extends State<PizzaScaffold> {
       key: _scaffoldState,
       appBar: AppBar(
         title: FittedBox(fit: BoxFit.scaleDown, child: Text(widget.title)),
-        backgroundColor: Colors.teal,
+        backgroundColor: const Color.fromARGB(255, 255, 160, 0),
         foregroundColor: Colors.white,
         actions: widget.actions,
       ),
@@ -80,7 +80,7 @@ class _PizzaScaffoldStateState extends State<PizzaScaffold> {
               onPressed: () => Navigator.pop(context),
               child: Text(
                 locale.backButton,
-                style: const TextStyle(color: Colors.teal),
+                style: const TextStyle(color: Color.fromARGB(255, 255, 162, 0)),
               ),
             ),
             TextButton(
